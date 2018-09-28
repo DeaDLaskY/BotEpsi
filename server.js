@@ -47,13 +47,15 @@ client.on('message',message =>{
 
 client.on('messageReactionAdd', (reaction, user) => {
   if (client.channels.get(channels.welcome) === true) {
-    if(reaction.emoji.name === "✅") {
-        console.log(reaction.users);}
-  if (client.message.content === "EPSI") {
     
+  if (client.message.content === "EPSI") {
+    if(reaction.emoji.name === "✅") {
       var EPSI = client.guild.roles.find('name', 'EPSI')
       console.log(EPSI)
       user.addRole(EPSI)
+      console.log("role EPSI donné")
+        console.log(reaction.users);}
+    
     }
   }
 });
