@@ -49,7 +49,7 @@ client.on('messageReactionAdd', (reaction, user) => {
   if (client.channels.get(channels.welcome) === true) {
     if(reaction.emoji.name === "✅") {
         console.log(reaction.users);}
-  if (client.channel.fetchMessage('495267034880409601') === true) {
+  if (client.message.content === "EPSI") {
     
       var EPSI = client.guild.roles.find('name', 'EPSI')
       console.log(EPSI)
