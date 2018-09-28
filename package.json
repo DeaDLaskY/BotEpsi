@@ -1,5 +1,5 @@
 {
-  "name": "EPSI Bot",
+  "name": "EPSI",
   "version": "1.0",
   "description": "Le meilleur bot de tout les temps",
   "main": "server.js",

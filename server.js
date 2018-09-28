@@ -47,10 +47,15 @@ client.on('message',message =>{
 
 client.on('messageReactionAdd', (reaction, user) => {
   if (client.channels.get(channels.welcome) === true) {
-  if (client.channel.fetchMessage('495267034880409601') === true)
-  if(reaction.emoji.name === "✅") {
-        console.log(reaction.users);
-    }}
+    if(reaction.emoji.name === "✅") {
+        console.log(reaction.users);}
+  if (client.channel.fetchMessage('495267034880409601') === true) {
+    
+      var EPSI = client.guild.roles.find('name', 'EPSI')
+      console.log(EPSI)
+      user.addRole(EPSI)
+    }
+  }
 });
 
 
