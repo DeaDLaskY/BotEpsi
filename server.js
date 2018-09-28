@@ -12,6 +12,11 @@ client.on('ready', () => {
   client.user.setActivity('!help')
 })
 
+const channels= {
+  welcome: '495190443928059904'
+}
+
+
 client.on('message',message =>{
   let msg = message.content.toUpperCase();
 	let sender=message.author;
@@ -40,7 +45,13 @@ client.on('message',message =>{
 
 
 
-
+client.on('messageReactionAdd', (reaction, user) => {
+  if (client.channels.get(channels.welcome) === true) {
+  if (client.channel.fetchMessage('495267034880409601') === true)
+  if(reaction.emoji.name === "✅") {
+        console.log(reaction.users);
+    }}
+});
 
 
 
