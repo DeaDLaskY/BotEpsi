@@ -1,12 +1,15 @@
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const prefix
-
+const prefix = '!'
+const ownerID = '261486733059817475'
+/* global Map*/
+const active = new Map();
 
 client.on('ready', () => {
   console.log('-------------------------------')
   console.log('        EPSI Bot Online        ')
   console.log('-------------------------------')
+  client.user.setActivity('!help')
 })
 
 client.on('message',message =>{
@@ -30,16 +33,15 @@ client.on('message',message =>{
   console.log(e.stack);
   }  finally {
     console.log(`${message.author.tag} a utilisé la commande ${cmd}`);}
-  
-  
-
-
-
-
-
-
-
+  if (msg === prefix+'ping'){
+    message.channel.send('Pong!')
+  }
 })
+
+
+
+
+
 
 
 
