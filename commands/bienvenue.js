@@ -5,8 +5,9 @@ exports.run = async (client, message, args) => {
     const reactivité = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id,
         reactcollect = msg.createReactionCollector(reactivité, {time: 600000000})
     reactcollect.on('collect',r => {
-      message.member.addRole('495248261117116437')
+      message.user.id.addRole('495248261117116437').catch()
       message.author.send('Le role epsi t\'a été attribué')
+      
     
     })
   })
