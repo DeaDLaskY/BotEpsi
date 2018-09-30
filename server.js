@@ -63,11 +63,11 @@ client.on('messageReactionAdd', (reaction, user) => {
 
 
 //Settings!
-const yourID = ""; //Instructions on how to get this: https://redd.it/40zgse
-const setupCMD = "?bienvenue"
-let initialMessage = ``;
+const yourID = "261486733059817475"; //Instructions on how to get this: https://redd.it/40zgse
+const setupCMD = "!test"
+let initialMessage = `Yo!`
 const roles = ["EPSI", "WIS", "League of Legends", "Counter-Strike Global Offensive", "Overwatch"];
-const reactions = ["ðŸ’»", "ðŸ–Œ", "ðŸ˜ƒ", "ðŸ†•", "45"];
+const reactions = ["✅", "✅", "✅", "✅", "✅"];
 
 
 //If there isn't a reaction for every role, scold the user!

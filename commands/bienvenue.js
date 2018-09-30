@@ -1,8 +1,8 @@
 exports.run = async (client, message, args) => {
+  const channel = client.channels.find('name', 'bienvenue')
   
-  if (client.channels.get != '495190443928059904') return
   
-  message.channel.send('EPSI').then(msg =>{
+  channel.send('EPSI').then(msg =>{
     msg.react('✅')
     
   
