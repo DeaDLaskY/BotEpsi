@@ -51,6 +51,7 @@ client.on('messageReactionAdd', (reaction, member) =>{
   if (!client.channels.get(channels.welcome)) return
   const epsirole = '495898200499159061'
   if (reaction.emoji.name === '👍'){
+    reaction.user.reply("oui")
     member.addRole(epsirole)
     console.log("Role ajouté")
   

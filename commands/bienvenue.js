@@ -1,5 +1,5 @@
 exports.run = async (client, message, args) => {
-  const channel = message.guild.channels.find("name", "bienvenue");
+  const channel = message.guild.channels.find("name", "test-bot");
   channel.send('EPSI').then(message =>{
     message.react('👍').then(() => message.react('👎'));
 
