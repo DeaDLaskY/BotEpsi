@@ -46,22 +46,6 @@ client.on('message',message =>{
 
 
 
-client.on('messageReactionAdd', (reaction, users) =>{
-  
-
-
-
-
-
-
-
-})
-
-
-
-
-
-
 
 
 
