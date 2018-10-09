@@ -1,13 +1,13 @@
+const Discord = require('discord.js')
 exports.run = async(client, message, args) =>{
-  const helpmusique = new client.RichEmbed()
-  
-  .title = "Commandes Musique"
-  .setColor = "#f442f4"
+  const embed = new Discord.RichEmbed()
+  .title = ("Commandes Musique")
+  .setColor = (0x00AE86)
   .addField('!play {NomMusique}')
   .addField('!skip')
   .addField('!volume {0/100}')
   .addField('!queue')
   
-  channel.send(
+  message.channel.send({embed})
 
 }
