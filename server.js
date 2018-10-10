@@ -4,6 +4,7 @@ const prefix = '!'
 const ownerID = '261486733059817475'
 /* global Map*/
 const active = new Map();
+var lol = require('lol-js');
 
 client.on('ready', () => {
   console.log('-------------------------------')
