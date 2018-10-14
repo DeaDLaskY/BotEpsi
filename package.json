@@ -9,12 +9,14 @@
   },
   "dependencies": {
     "discord.js": "^11.4.2",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
     "lol-js": "^2.0.2",
     "node-opus": "^0.3.0",
     "yt-search": "^0.2.0",
     "ytdl": "^0.10.3",
-    "ytdl-core": "^0.26.1"
+    "ytdl-core": "^0.26.1",
+    "opgg-mmr": "^1.0.1",
+    "opgg-ladder": "^1.0.2"
   },
   "engines": {
     "node": "8.x"
