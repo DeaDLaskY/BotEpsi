@@ -2,8 +2,8 @@ dependencies:
   discord.js: 11.4.2
   express: 4.16.4
   lol-js: 2.0.2
-  lolapi: 0.3.1
   node-opus: 0.3.0
+  redis: 2.8.0
   yt-search: 0.2.0
   ytdl: 0.10.4
   ytdl-core: 0.26.1
@@ -863,12 +863,6 @@ packages:
       node: '>=0.10.1'
     resolution:
       integrity: sha1-YEAsBNgWDtaR12+XL77NoXnsjAk=
-  /lolapi/0.3.1:
-    dependencies:
-      redis: 0.12.1
-    dev: false
-    resolution:
-      integrity: sha1-2U3fQcL3in/C6EcnjVMrlt9HqB0=
   /long/4.0.0:
     dev: false
     resolution:
@@ -1135,10 +1129,6 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-Uu0J2srBCPGmMcB+m2mUHnoZUEs=
-  /redis/0.12.1:
-    dev: false
-    resolution:
-      integrity: sha1-ZN92rQ/IrOuuvSoGReikj6xJGF4=
   /redis/2.8.0:
     dependencies:
       double-ended-queue: 2.1.0-0
@@ -1487,8 +1477,8 @@ specifiers:
   discord.js: ^11.4.2
   express: ^4.16.4
   lol-js: ^2.0.2
-  lolapi: ^0.3.1
   node-opus: ^0.3.0
+  redis: ^2.8.0
   yt-search: ^0.2.0
   ytdl: ^0.10.3
   ytdl-core: ^0.26.1

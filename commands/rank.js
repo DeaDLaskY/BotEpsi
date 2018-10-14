@@ -1,7 +1,12 @@
 exports.run = (client, message, args) =>{
-var lolapi = require('lolapi')('RGAPI-30a720d7-8836-41e1-9bf6-aa5cddb03a96', 'euw');
-  lolapi.Champion.getAll({ freeToPlay: true }, function (error, champion) {
-  // do something with free to play champions
+var lol = require('lol-js');
+var lolClient = lol.client({
+    apiKey: 'RGAPI-30a720d7-8836-41e1-9bf6-aa5cddb03a96',
+    cache: lol.redisCache({host: '127.0.0.1', port: 6379})
+});
+lolClient.getChampionById('na', 53, {champData: ['all']}, function(err, data) {
+    console.log("Found ", data.name);
+    lolClient.destroy();
 });
 
 }
