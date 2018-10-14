@@ -2,35 +2,12 @@ dependencies:
   discord.js: 11.4.2
   express: 4.16.4
   lol-js: 2.0.2
+  lolapi: 0.3.1
   node-opus: 0.3.0
-  opgg-ladder: 1.0.2
-  opgg-mmr: 1.0.1
   yt-search: 0.2.0
   ytdl: 0.10.4
   ytdl-core: 0.26.1
 packages:
-  /CSSselect/0.4.1:
-    dependencies:
-      CSSwhat: 0.4.7
-      domutils: 1.4.3
-    deprecated: the module is now available as 'css-select'
-    dev: false
-    resolution:
-      integrity: sha1-+Kt+H4QYzmPNput713ioXX7EkrI=
-  /CSSwhat/0.4.7:
-    deprecated: the module is now available as 'css-what'
-    dev: false
-    resolution:
-      integrity: sha1-hn2g/zn3eGEyQsRM/qg/CqTr35s=
-  /JSONStream/0.9.0:
-    dependencies:
-      jsonparse: 0.0.5
-      through: 2.3.8
-    dev: false
-    hasBin: true
-    resolution:
-      integrity: sha1-bOCrOC2j7Ha02QG5Hzgd1EypflY=
-      tarball: 'http://registry.npmjs.org/JSONStream/-/JSONStream-0.9.0.tgz'
   /accepts/1.3.5:
     dependencies:
       mime-types: 2.1.20
@@ -235,18 +212,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-ObN6h1v2fTJSmUXoS3nMQ92LbDK9be4TV+6G+omQlGJFdcUX5heKi1LZ1YnRMIgwTLEj3E24bT6tYni50rlCfQ==
-  /cheerio/0.17.0:
-    dependencies:
-      CSSselect: 0.4.1
-      dom-serializer: 0.0.1
-      entities: 1.1.1
-      htmlparser2: 3.7.3
-      lodash: 2.4.2
-    dev: false
-    engines:
-      node: '>= 0.6'
-    resolution:
-      integrity: sha1-+lrkLMYBIRM9KW0LRtmDIV9yaOo=
   /cheerio/0.22.0:
     dependencies:
       css-select: 1.2.0
@@ -450,13 +415,6 @@ packages:
       uws: ^9.14.0
     resolution:
       integrity: sha512-MDwpu0lMFTjqomijDl1Ed9miMQe6kB4ifKdP28QZllmLv/HVOJXhatRgjS8urp/wBlOfx+qAYSXcdI5cKGYsfg==
-  /dom-serializer/0.0.1:
-    dependencies:
-      domelementtype: 1.1.3
-      entities: 1.1.1
-    dev: false
-    resolution:
-      integrity: sha1-lYmCfx4y0iw3yCmtq9WbMkevjq8=
   /dom-serializer/0.1.0:
     dependencies:
       domelementtype: 1.1.3
@@ -472,24 +430,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-sXrtguirWeUt2cGbF1bg/BhyBMI=
-  /domhandler/2.2.1:
-    dependencies:
-      domelementtype: 1.3.0
-    dev: false
-    resolution:
-      integrity: sha1-Wd+dzSJ+gIs2Wuc+H2aErD2Ub8I=
   /domhandler/2.4.2:
     dependencies:
       domelementtype: 1.3.0
     dev: false
     resolution:
       integrity: sha512-JiK04h0Ht5u/80fdLMCEmV4zkNh2BcoMFBmZ/91WtYZ8qVXSKjiw7fXMgFPnHcSZgOo3XdinHvmnDUeMf5R4wA==
-  /domutils/1.4.3:
-    dependencies:
-      domelementtype: 1.3.0
-    dev: false
-    resolution:
-      integrity: sha1-CGVRN5bGswYDGFDhdVFrr4C3Km8=
   /domutils/1.5.1:
     dependencies:
       dom-serializer: 0.1.0
@@ -508,11 +454,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-ED01J/0xUo9AGIEwyEHv3XgmTlw=
-  /duplexer/0.1.1:
-    dev: false
-    resolution:
-      integrity: sha1-rOb/gIwc5mtX0ev5eXessCM0z8E=
-      tarball: 'http://registry.npmjs.org/duplexer/-/duplexer-0.1.1.tgz'
   /ecc-jsbn/0.1.2:
     dependencies:
       jsbn: 0.1.1
@@ -531,10 +472,6 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-rT/0yG7C0CkyL1oCw6mmBslbP1k=
-  /entities/1.0.0:
-    dev: false
-    resolution:
-      integrity: sha1-sph6o4ITR/zeZCsk/fyeT7cSvyY=
   /entities/1.1.1:
     dev: false
     resolution:
@@ -744,16 +681,6 @@ packages:
       '0': node >= 0.4.0
     resolution:
       integrity: sha1-DfKTUfByEWNRXfueVUPl9u7VFi8=
-  /htmlparser2/3.7.3:
-    dependencies:
-      domelementtype: 1.3.0
-      domhandler: 2.2.1
-      domutils: 1.5.1
-      entities: 1.0.0
-      readable-stream: 1.1.14
-    dev: false
-    resolution:
-      integrity: sha1-amTHdjfAjG8w7CqBV6UzM758sF4=
   /htmlparser2/3.9.2:
     dependencies:
       domelementtype: 1.3.0
@@ -788,13 +715,6 @@ packages:
       npm: '>=1.3.7'
     resolution:
       integrity: sha1-muzZJRFHcvPZW2WmCruPfBj7rOE=
-  /hyperquest/0.3.0:
-    dependencies:
-      duplexer: 0.1.1
-      through: 2.2.7
-    dev: false
-    resolution:
-      integrity: sha1-TDwGwHR1XpIfCaLbUa6l5ufuFV8=
   /iconv-lite/0.4.23:
     dependencies:
       safer-buffer: 2.1.2
@@ -827,10 +747,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=
-  /isarray/0.0.1:
-    dev: false
-    resolution:
-      integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
   /isarray/1.0.0:
     dev: false
     resolution:
@@ -856,12 +772,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
-  /jsonparse/0.0.5:
-    dev: false
-    engines:
-      '0': node >= 0.2.0
-    resolution:
-      integrity: sha1-MwVCrT8KZUZlt3jz6y2an6UHrGQ=
   /jsprim/1.4.1:
     dependencies:
       assert-plus: 1.0.0
@@ -905,14 +815,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-Gmo16s5AEoDH8G3d7DUWWrJ+PlM=
-  /lodash.isfunction/2.4.1:
-    dev: false
-    resolution:
-      integrity: sha1-LP1XXHPkmKtX4xm3f6Aq3vE6lNE=
-  /lodash.isstring/2.4.1:
-    dev: false
-    resolution:
-      integrity: sha1-OkpC7jRLW8Ca6qh+8dwwl3idB5I=
   /lodash.map/4.6.0:
     dev: false
     resolution:
@@ -921,12 +823,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
-  /lodash.parseint/2.4.1:
-    dependencies:
-      lodash.isstring: 2.4.1
-    dev: false
-    resolution:
-      integrity: sha1-8audF7TWBXYGhwp99rxl6vAqQ10=
   /lodash.pick/4.4.0:
     dev: false
     resolution:
@@ -947,14 +843,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
-  /lodash/2.4.2:
-    dev: false
-    engines:
-      '0': node
-      '1': rhino
-    resolution:
-      integrity: sha1-+t2DS5aDBz2hebPq5tnA0VBT9z4=
-      tarball: 'http://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz'
   /lodash/3.10.1:
     dev: false
     resolution:
@@ -975,6 +863,12 @@ packages:
       node: '>=0.10.1'
     resolution:
       integrity: sha1-YEAsBNgWDtaR12+XL77NoXnsjAk=
+  /lolapi/0.3.1:
+    dependencies:
+      redis: 0.12.1
+    dev: false
+    resolution:
+      integrity: sha1-2U3fQcL3in/C6EcnjVMrlt9HqB0=
   /long/4.0.0:
     dev: false
     resolution:
@@ -1134,23 +1028,6 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=
-  /opgg-ladder/1.0.2:
-    dependencies:
-      JSONStream: 0.9.0
-      cheerio: 0.17.0
-      hyperquest: 0.3.0
-      lodash.isfunction: 2.4.1
-      lodash.parseint: 2.4.1
-    dev: false
-    resolution:
-      integrity: sha1-e0Y/phgGLgEQ9+no1ETvOHaLZy4=
-  /opgg-mmr/1.0.1:
-    dependencies:
-      JSONStream: 0.9.0
-      hyperquest: 0.3.0
-    dev: false
-    resolution:
-      integrity: sha1-uBn1Q+h7OgHuQPyj/bJOwA5vpcI=
   /parseurl/1.3.2:
     dev: false
     engines:
@@ -1235,16 +1112,6 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-9esiElv1BrZoI3rCDuOuKCBRbuApGGaDPQfjSflGxdy4oyzqghxu6klEkkVIvBje+FF0BX9coEv8KqW6X/7njw==
-  /readable-stream/1.1.14:
-    dependencies:
-      core-util-is: 1.0.2
-      inherits: 2.0.3
-      isarray: 0.0.1
-      string_decoder: 0.10.31
-    dev: false
-    resolution:
-      integrity: sha1-fPTFTvZI44EwhMY23SB54WbAgdk=
-      tarball: 'http://registry.npmjs.org/readable-stream/-/readable-stream-1.1.14.tgz'
   /readable-stream/2.3.6:
     dependencies:
       core-util-is: 1.0.2
@@ -1268,6 +1135,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-Uu0J2srBCPGmMcB+m2mUHnoZUEs=
+  /redis/0.12.1:
+    dev: false
+    resolution:
+      integrity: sha1-ZN92rQ/IrOuuvSoGReikj6xJGF4=
   /redis/2.8.0:
     dependencies:
       double-ended-queue: 2.1.0-0
@@ -1430,10 +1301,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-nOqH59deCq9SRHlxq1Aw85Jnt4w6KvLKqWVik6oA9ZklXLNIOlqg4F2yrT1MVaTjAqvVwdfeZ7w7aCvJD7ugkw==
-  /string_decoder/0.10.31:
-    dev: false
-    resolution:
-      integrity: sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=
   /string_decoder/1.1.1:
     dependencies:
       safe-buffer: 5.1.2
@@ -1456,16 +1323,6 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
-  /through/2.2.7:
-    dev: false
-    resolution:
-      integrity: sha1-bo4hIAGR1OtqmfbwEN9Gqhxusr0=
-      tarball: 'http://registry.npmjs.org/through/-/through-2.2.7.tgz'
-  /through/2.3.8:
-    dev: false
-    resolution:
-      integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
-      tarball: 'http://registry.npmjs.org/through/-/through-2.3.8.tgz'
   /timers-ext/0.1.7:
     dependencies:
       es5-ext: 0.10.46
@@ -1630,9 +1487,8 @@ specifiers:
   discord.js: ^11.4.2
   express: ^4.16.4
   lol-js: ^2.0.2
+  lolapi: ^0.3.1
   node-opus: ^0.3.0
-  opgg-ladder: ^1.0.2
-  opgg-mmr: ^1.0.1
   yt-search: ^0.2.0
   ytdl: ^0.10.3
   ytdl-core: ^0.26.1
