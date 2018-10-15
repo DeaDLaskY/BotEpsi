@@ -2,6 +2,7 @@ const Discord = require('discord.js')
 const client = new Discord.Client()
 const prefix = '!'
 const ownerID = '261486733059817475'
+const ms = require('parse-ms');
 /* global Map*/
 const active = new Map();
 var lol = require('lol-js');
@@ -9,6 +10,7 @@ var lolClient= lol.client({
   apiKey:"RGAPI-30a720d7-8836-41e1-9bf6-aa5cddb03a96",
   
 })
+
 
 client.on('ready', () => {
   console.log('-------------------------------')

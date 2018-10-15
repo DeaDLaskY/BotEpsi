@@ -15,7 +15,8 @@
     "yt-search": "^0.2.0",
     "ytdl": "^0.10.3",
     "ytdl-core": "^0.26.1",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "parse-ms": "^2.0.0"
   },
   "engines": {
     "node": "8.x"

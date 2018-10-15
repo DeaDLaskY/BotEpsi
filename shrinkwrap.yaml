@@ -3,6 +3,7 @@ dependencies:
   express: 4.16.4
   lol-js: 2.0.2
   node-opus: 0.3.0
+  parse-ms: 2.0.0
   redis: 2.8.0
   yt-search: 0.2.0
   ytdl: 0.10.4
@@ -1022,6 +1023,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-IPEzZIGwg811M3mSoWlxqi2QaUc=
+  /parse-ms/2.0.0:
+    dev: false
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-AddiXFSLLCqj+tCRJ9MrUtHZB4DWojO3tk0NVZ+g5MaMQHF2+p2ktqxuoXyPFLljz/aUK0Nfhd/uGWnhXVXEyA==
   /parseurl/1.3.2:
     dev: false
     engines:
@@ -1478,6 +1485,7 @@ specifiers:
   express: ^4.16.4
   lol-js: ^2.0.2
   node-opus: ^0.3.0
+  parse-ms: ^2.0.0
   redis: ^2.8.0
   yt-search: ^0.2.0
   ytdl: ^0.10.3
