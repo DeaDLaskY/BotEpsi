@@ -3,6 +3,7 @@ const client = new Discord.Client()
 const prefix = '!'
 const ownerID = '261486733059817475'
 const ms = require('parse-ms');
+const talkedRecently = new Set();
 /* global Map*/
 const active = new Map();
 var lol = require('lol-js');
@@ -21,6 +22,11 @@ client.on('ready', () => {
 
 const channels= {
   welcome: '495190443928059904'
+}
+const roles = {
+  piplette: '501312575812796418',
+  theking: '495172188828073985'
+
 }
 
 
@@ -48,6 +54,20 @@ client.on('message',message =>{
   if (msg === prefix+'ping'){
     message.channel.send('Pong!')
   }
+  
+  if (talkedRecently.has(msg.author.id)&& talkedRece) {
+            msg.channel.send("Wait 1 minute before getting typing this again. - " + msg.author);
+    } else {
+
+           // the user can type the command ... your command code goes here :)
+
+        // Adds the user to the set so that they can't talk for a minute
+        talkedRecently.add(msg.author.id);
+        setTimeout(() => {
+          // Removes the user from the set after a minute
+          talkedRecently.delete(msg.author.id);
+        }, 60000);
+    }
 })
 
 
