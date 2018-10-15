@@ -54,21 +54,6 @@ client.on('message',message =>{
   if (msg === prefix+'ping'){
     message.channel.send('Pong!')
   }
-  
-  if (talkedRecently.has(msg.author.id)&& talkedRecently.has(roles.piplette)) {
-            msg.channel.send("Wait 1 minute before getting typing this again. - " + msg.author);
-    } else {
-
-           // the user can type the command ... your command code goes here :)
-
-        // Adds the user to the set so that they can't talk for a minute
-        talkedRecently.add(msg.author.id);
-      talkedRecently.add(roles.piplette);
-        setTimeout(() => {
-          // Removes the user from the set after a minute
-          talkedRecently.delete(msg.author.id);
-        }, 60000);
-    }
 })
 
 
