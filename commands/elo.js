@@ -1,7 +1,8 @@
 exports.run = (client, message, args) =>{
 var lol = require('lol-js');
 var lolClient = lol.client({
-    apiKey: process.env.API
+    apiKey: process.env.API,
+     cache: lol.redisCache({host: '127.0.0.1', port: 80})
 })
 lolClient.getChampionById('na', 53, {champData: ['all']}, function(err, data) {
     console.log("Found ", data.name);
