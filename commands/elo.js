@@ -9,4 +9,6 @@ lolClient.getChampionById('euw', 53, {champData: ['all']}, function(err, data) {
   message.channel.send(data)
     lolClient.destroy();
 });
+  lolClient.getSummonerByName(args[0], name)
+  console.log(name)
 }
