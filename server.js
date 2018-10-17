@@ -91,9 +91,6 @@ setTimeout(() => {
   talkedRecently.delete(message.author.id);
 }, 2500);
   const parlage = message.guild.roles.get("name", "Piplette")
-  if(message.member.roles.has(parlage)){
-    cooldown.add(message.au
-     }
 })
 
 
