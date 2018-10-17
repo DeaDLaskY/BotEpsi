@@ -1,21 +1,6 @@
-exports.run = (client, message, args) => {
-  let myRole = message.guild.roles.get('501312575812796418');
-  console.log(myRole)
-  if(message.member.roles.has(myRole)) {
-  console.log(`Yay, the author of the message has the role!`);
-  message.channel.send("...")
-} else {
-  console.log(`Nope, noppers, nadda.`);
-  message.channel.send('!!')
+exports.run = async (client, message, args) => {
+  let roleID = "501312575812796418";
+let membersWithRole = message.guild.roles.get(roleID).members;
+console.log(`Got ${membersWithRole.size} members with that role.`);
+  console.log(membersWithRole)
 }
-
-
-
-
-
-
-
-}
-
-
-
