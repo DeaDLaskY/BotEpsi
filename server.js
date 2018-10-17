@@ -3,7 +3,6 @@ const client = new Discord.Client()
 const prefix = '!'
 const ownerID = '261486733059817475'
 const ms = require('parse-ms');
-const talkedRecently = new Set();
 /* global Map*/
 const active = new Map();
 var lol = require('lol-js');
@@ -54,7 +53,18 @@ client.on('message',message =>{
   if (msg === prefix+'ping'){
     message.channel.send('Pong!')
   }
+  const talkedRecently = new Set();
+  if (talkedRecently.has(message.author.id))
+  return;
+// Adds the user to the set so that they can't talk for 2.5 seconds
+talkedRecently.add(message.author.id);
+setTimeout(() => {
+  // Removes the user from the set after 2.5 seconds
+  talkedRecently.delete(message.author.id);
+}, 2500);
+  
 })
+
 
 
 
