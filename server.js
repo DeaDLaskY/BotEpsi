@@ -5,6 +5,8 @@ const ownerID = '261486733059817475'
 const ms = require('parse-ms');
 /* global Map*/
 const active = new Map();
+let cooldown = new Set();
+let cdsecondes = 20;
 var lol = require('lol-js');
 var lolClient= lol.client({
   apiKey:"RGAPI-30a720d7-8836-41e1-9bf6-aa5cddb03a96",
@@ -32,6 +34,27 @@ const roles = {
   theking: '495172188828073985'
 
 }
+client.on("presenceUpdate", (members) => {
+members = members.guild.members.array();
+var count = 0;
+for (var i = 0; i < members.length; i++) { if(members[i].user.presence.status !== "offline") count++; }
+  client.channels.get(serverStats.OnlineID).setName(`Online: ${count}`)
+})
+client.on("guildMemberAdd", member => {
+    if (member.guild.id !== serverStats.guildID) return;
+	  client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
+    client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
+
+  
+})
+//--------------------------------Bye Bye------------------------------------------------------------//
+client.on("guildMemberRemove", member =>{
+	member.guild.channels.find("name", "bienvenue").send(`${member} viens de partir...`)
+    if (member.guild.id !== serverStats.guildID) return;
+    client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
+    client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
+
+})
 
 
 client.on('message',message =>{
@@ -67,7 +90,10 @@ setTimeout(() => {
   // Removes the user from the set after 2.5 seconds
   talkedRecently.delete(message.author.id);
 }, 2500);
-  
+  const parlage = message.guild.roles.get("name", "Piplette")
+  if(message.member.roles.has(parlage)){
+    cooldown.add(message.au
+     }
 })
 
 
