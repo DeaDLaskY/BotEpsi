@@ -12,6 +12,11 @@ var lolClient= lol.client({
 })
 
 
+const serverStats = {
+    totalUsersID: '502091188644478991',
+    OnlineID: '502091290738163714'
+}
+
 client.on('ready', () => {
   console.log('-------------------------------')
   console.log('        EPSI Bot Online        ')
