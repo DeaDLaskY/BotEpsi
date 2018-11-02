@@ -134,7 +134,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-trvgsGdLnXGXCMo43owjfLUmw9E=
-      tarball: 'http://registry.npmjs.org/async/-/async-0.2.10.tgz'
   /asynckit/0.4.0:
     dev: false
     resolution:
@@ -295,7 +294,6 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha1-cj599ugBrFYTETp+RFqbactjKBg=
-      tarball: 'http://registry.npmjs.org/combined-stream/-/combined-stream-1.0.6.tgz'
   /combined-stream/1.0.7:
     dependencies:
       delayed-stream: 1.0.0
@@ -497,7 +495,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-oIzd6EzNvzTQJ6FFG8kdS80ophM=
-      tarball: 'http://registry.npmjs.org/es6-promise/-/es6-promise-3.3.1.tgz'
   /es6-symbol/3.1.1:
     dependencies:
       d: 1.0.0
@@ -618,7 +615,6 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-Y1GUDo39ez4aHAw7MysnUD5JzYX+WaIj8I57kO3aEPT1fFRL4sr7mjei97FgnwhAyyzRYmQZaTHb2+9uZ1dPtg==
-      tarball: 'http://registry.npmjs.org/finalhandler/-/finalhandler-1.1.1.tgz'
   /forever-agent/0.6.1:
     dev: false
     resolution:
@@ -704,7 +700,6 @@ packages:
       node: '>= 0.6'
     resolution:
       integrity: sha1-i1VoC7S+KDoLW/TqLjhYC+HZMg0=
-      tarball: 'http://registry.npmjs.org/http-errors/-/http-errors-1.6.3.tgz'
   /http-signature/1.2.0:
     dependencies:
       assert-plus: 1.0.0
@@ -847,7 +842,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
-      tarball: 'http://registry.npmjs.org/lodash/-/lodash-3.10.1.tgz'
   /lol-js/2.0.2:
     dependencies:
       es6-promise: 3.3.1
@@ -953,7 +947,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ=
-      tarball: 'http://registry.npmjs.org/minimist/-/minimist-1.2.0.tgz'
   /ms/2.0.0:
     dev: false
     resolution:
@@ -1134,7 +1127,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-tQtKA9WIAhBF3+VLAseyMqZeBjW0AHJoxOtYqSUZNJxauErmLbVm2FW1y+J/YA9dUrAC39ITejlZWhVIwawkKw==
-      tarball: 'http://registry.npmjs.org/readable-stream/-/readable-stream-2.3.6.tgz'
   /redis-commands/1.4.0:
     dev: false
     resolution:
@@ -1448,7 +1440,6 @@ packages:
       node: '>= 0.6.0'
     resolution:
       integrity: sha1-ZLar9M0Brcrv1QCTk7HY6L7BnbA=
-      tarball: 'http://registry.npmjs.org/winston/-/winston-0.8.3.tgz'
   /ws/4.1.0:
     dependencies:
       async-limiter: 1.0.0
