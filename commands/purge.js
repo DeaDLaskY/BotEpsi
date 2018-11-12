@@ -3,7 +3,7 @@ exports.run = async (client, message, args, tools) => {
   async function purge(){
 			message.delete();
 
-			if(!message.member.roles.find("name", "The King", "Modos")){
+			if(!message.member.roles.find("name", "Créateur", "Modos")){
 				message.channel.send('Tu n\'as pas les droits pour ca')
 				return;
 			}
