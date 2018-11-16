@@ -21,6 +21,7 @@ exports.run = async (client, message, args, tools) => {
 
 		}
 
+  
 		purge();
   message.delete();
   
