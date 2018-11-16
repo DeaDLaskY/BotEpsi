@@ -8,6 +8,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "ascii-art": "^1.5.0",
     "discord.js": "^11.4.2",
     "express": "^4.16.4",
     "lol-js": "^2.0.2",
@@ -15,10 +16,10 @@
     "parse-ms": "^2.0.0",
     "redis": "^2.8.0",
     "redis-server": "^1.2.2",
+    "tensor": "^0.1.0",
     "yt-search": "^0.2.0",
     "ytdl": "^0.10.3",
-    "ytdl-core": "^0.26.3",
-    "tensor": "^0.1.0"
+    "ytdl-core": "^0.26.3"
   },
   "engines": {
     "node": "8.x"
