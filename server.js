@@ -46,9 +46,8 @@ client.on("guildMemberAdd", member => {
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
 
 client.on("MessageReactionAdd", function(users) {
-  const bienvenue = client.channel.find('name','autorole')
-    if(!bienvenue) return
-    if (client.emoji.react.name === ':epsi:'){}
+    if (client.message.content === 'YoLo'){
+    client.message.channel.reply('Salut!')}
        
 });
 
