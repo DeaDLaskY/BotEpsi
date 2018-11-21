@@ -7,29 +7,28 @@ exports.run = async (client, message, args) => {
 				return;
 			}
    
-  
-  if (args[0] === 'B1'){
-    
+ 
+  if (args[1] === 'B1'){
+    let member = message.mentions.members.first();
      message.channel.send('Grp1 ou Grp2?')
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 20000 });
-        console.log(collector)
         collector.on('collect', message => {
             if (message.content == "Grp1") {
                 message.channel.send("Tu as les roles B1 et Grp1");
               let roleB1Gr1 = message.guild.roles.find('name','B1Gr1')
-              message.addRole(roleB1Gr1)
+              member.addRole(roleB1Gr1)
               console.log(message.author.id)
               
             } else if (message.content == "Grp2") {
                 message.channel.send("Tu as les roles B1 et Grp2");
               let roleB1Gr2 = message.guild.roles.find('name','B1Gr2')
-              message.author.addRole(roleB1Gr2)
+              member.addRole(roleB1Gr2)
             }
           let roleB1 = message.guild.roles.find('name','B1')
-              message.author.addRole(roleB1)
+              member.addRole(roleB1)
   }
 )}
-  if (args[0] === 'B2'){
+  if (args[1] === 'B2'){
     
      message.channel.send('Grp1 ou Grp2?')
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 20000 });
