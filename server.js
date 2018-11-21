@@ -40,12 +40,13 @@ var count = 0;
 for (var i = 0; i < members.length; i++) { if(members[i].user.presence.status !== "offline") count++; }
   client.channels.get(serverStats.OnlineID).setName(`Online: ${count}`)
 })
+//-------------------------------New Member----------------------------------------------------------//
 client.on("guildMemberAdd", member => {
     if (member.guild.id !== serverStats.guildID) return;
-	  client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
+  member.guild.channels.get('495190443928059904').send('**' + member.user.username + '**, has joined the server!');
+	client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
-    member.guild.channels.find("name", "bienvenue").send(`${member} Bienvenue sur le Discord Officiel des EPSI/WIS!\nTu peut accéder a une multitude de channles,mais avant ca\ntu peut aller dans #autorole pour te donner les rôles`)
-  
+    client.channels.get(serverStats.botCountID).setName(`Bots : ${member.guild.members.filter(m => m.user.bot).size}`);
 
   
 })
@@ -55,9 +56,9 @@ client.on("guildMemberRemove", member =>{
     if (member.guild.id !== serverStats.guildID) return;
     client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
+    client.channels.get(serverStats.botCountID).setName(`Bots : ${member.guild.members.filter(m => m.user.bot).size}`);
 
 })
-
 
 client.on('message',message =>{
   let msg = message.content.toUpperCase();
