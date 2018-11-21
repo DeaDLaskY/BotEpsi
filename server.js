@@ -44,6 +44,7 @@ client.on("guildMemberAdd", member => {
     if (member.guild.id !== serverStats.guildID) return;
 	  client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
+  
 
   
 })

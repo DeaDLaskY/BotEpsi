@@ -1,15 +1,14 @@
 exports.run = async (client, message, args) => {
   const Discord = require('discord.js')
   
-  if(!args[0]) return message.channel.send('spécifie un rôle attribuer')
-  if(!message.member.roles.find("name", "Créateur", "Modos", "nouveau")){
-				message.channel.send('Tu n\'as pas les droits pour ca')
-				return;
-			}
+  
+  let member = message.mentions.members.first();
+  if (!member) return message.channel.send('Syntaxe Corecte: !autorole @Pseudo Role')
+  if(!args[1]) return message.channel.send('spécifie un rôle attribuer')
    
  
   if (args[1] === 'B1'){
-    let member = message.mentions.members.first();
+    
      message.channel.send('Grp1 ou Grp2?')
     const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 20000 });
         collector.on('collect', message => {
