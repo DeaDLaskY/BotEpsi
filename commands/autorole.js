@@ -15,12 +15,12 @@ exports.run = async (client, message, args) => {
                'I5Gr2':'role13',
                'BDE':'role14',
                'EPSI':'role15',
-               'WIS':'role16'}
+               'WIS':'role16'}//
   if(!args[0]) return message.channel.send('spécifie un rôle attribuer')
   if (args[0] = roles){
     message.channel.send('Tu as le rôle '+args[message.content]+' !')
+    console.log(roles[message.content])
   }
-
 
 
 
