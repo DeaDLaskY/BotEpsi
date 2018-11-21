@@ -25,15 +25,6 @@ client.on('ready', () => {
   console.log('-------------------------------')
   client.user.setActivity('!help')
 })
-
-const channels= {
-  welcome: '495190443928059904'
-}
-const roles = {
-  piplette: '501312575812796418',
-  theking: '495172188828073985'
-
-}
 client.on("presenceUpdate", (members) => {
 members = members.guild.members.array();
 var count = 0;
@@ -43,7 +34,7 @@ for (var i = 0; i < members.length; i++) { if(members[i].user.presence.status !=
 //-------------------------------New Member----------------------------------------------------------//
 client.on("guildMemberAdd", member => {
     if (member.guild.id !== serverStats.guildID) return;
-  member.guild.channels.get('495190443928059904').send('**' + member.user.username + '**, has joined the server!');
+  client.guild.channels.get('495190443928059904').send('**' + member.user.username + '**, has joined the server!');
 	client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
     client.channels.get(serverStats.botCountID).setName(`Bots : ${member.guild.members.filter(m => m.user.bot).size}`);
@@ -52,7 +43,7 @@ client.on("guildMemberAdd", member => {
 })
 //--------------------------------Bye Bye------------------------------------------------------------//
 client.on("guildMemberRemove", member =>{
-	member.guild.channels.find("name", "bienvenue").send(`${member} viens de partir...`)
+	client.guild.channels.get('c495190443928059904').send('**' + member.user.username + '**, has left the server');
     if (member.guild.id !== serverStats.guildID) return;
     client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
