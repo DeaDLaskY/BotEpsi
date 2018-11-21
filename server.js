@@ -44,6 +44,7 @@ client.on("guildMemberAdd", member => {
     if (member.guild.id !== serverStats.guildID) return;
 	  client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
+    member.guild.channels.find("name", "bienvenue").send(`${member} Bienvenue sur le Discord Officiel des EPSI/WIS!\nTu peut accéder a une multitude de channles,mais avant ca\ntu peut aller dans #autorole pour te donner les rôles`)
   
 
   

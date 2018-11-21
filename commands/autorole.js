@@ -3,8 +3,8 @@ exports.run = async (client, message, args) => {
   
   
   let member = message.mentions.members.first();
-  if (!member) return message.channel.send('Syntaxe Corecte: !autorole @Pseudo Role')
-  if(!args[1]) return message.channel.send('spécifie un rôle attribuer')
+  if (!member) return message.channel.send('Syntaxe Corecte: !autorole @Pseudo Role\nroles: B1,B2,B3,I4,I5,EPSI,WIS,BDE')
+  if(!args[1]) return message.channel.send('Syntaxe Corecte: !autorole @Pseudo Role\nroles: B1,B2,B3,I4,I5,EPSI,WIS,BDE')
    
  
   if (args[1] === 'B1'){
