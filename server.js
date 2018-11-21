@@ -45,12 +45,6 @@ client.on("guildMemberAdd", member => {
 	  client.channels.get(serverStats.totalUsersID).setName(`Total Utilisateurs : ${member.guild.memberCount}`);
     client.channels.get(serverStats.memberCountID).setName(`Humains : ${member.guild.members.filter(m => !m.user.bot).size}`);
 
-client.on("MessageReactionAdd", function(users) {
-    if (client.message.content === 'YoLo'){
-    client.message.channel.reply('Salut!')}
-       
-});
-
   
 })
 //--------------------------------Bye Bye------------------------------------------------------------//

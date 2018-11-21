@@ -16,9 +16,16 @@ exports.run = async (client, message, args) => {
         collector.on('collect', message => {
             if (message.content == "Grp1") {
                 message.channel.send("Tu as les roles B1 et Grp1");
+              let roleB1Gr1 = client.guild.roles.find('name','B1Gr1')
+              message.author.addRole(roleB1)
+              
             } else if (message.content == "Grp2") {
-                message.channel.send("You Want To Change Your Spec OK!");
+                message.channel.send("Tu as les roles B1 et Grp2");
+              let roleB1Gr2 = client.guild.roles.find('name','B1Gr2')
+              message.author.addRole(roleB1Gr2)
             }
+          let roleB1 = client.guild.roles.find('name','B1')
+              message.author.addRole(roleB1)
   }
 )}
   if (args[0] === 'B2'){
