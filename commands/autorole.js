@@ -1,33 +1,19 @@
 exports.run = async (client, message, args) => {
+  const Discord = require('
   
-  const roles = ['B1',
-               'B1Gr1',
-               'B1Gr2',
-               'B2',
-               'B3',
-               'B3Gr1',
-               'B3Gr2',
-               'I4',
-               'I4Gr1',
-               'I4Gr2',
-               'I5',
-               'I5Gr1',
-               'I5Gr2',
-               'BDE',
-               'EPSI',
-               'WIS']
   if(!args[0]) return message.channel.send('spécifie un rôle attribuer')
-  if (args[0] = roles){
-    message.channel.send('Tu as le rôle '+roles[args[0]]+' !').catch(console.error);
-    console.log(roles.length)
+   
+  
+  if (args[0] === 'B1'){
+    
+     message.author.send('Grp1 ou Grp2?')
+    const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+        console.log(collector)
+        collector.on('collect', message => {
+            if (message.content == "Grp1") {
+                message.channel.send("Tu as les roles B1 et Grp1");
+            } else if (message.content == "Change") {
+                message.channel.send("You Want To Change Your Spec OK!");
+            }
   }
-
-
-
-
-
-
-
-
-
-}
+                     )}}
