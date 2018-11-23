@@ -84,12 +84,7 @@ setTimeout(() => {
   // Removes the user from the set after 2.5 seconds
   talkedRecently.delete(message.author.id);
 }, 2500);
-  const parlage = message.guild.roles.get("name", "Piplette")
 })
-
-
-
-
 
 
 
